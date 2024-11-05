@@ -1,0 +1,38 @@
+{
+                "name": "Msg_erro_DAAS",
+                "type": "WebActivity",
+                "dependsOn": [
+                    {
+                        "activity": "DAAS_para_rawzone",
+                        "dependencyConditions": [
+                            "Failed"
+                        ]
+                    }
+                ],
+                "policy": {
+                    "timeout": "7.00:00:00",
+                    "retry": 0,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                },
+                "userProperties": [],
+                "typeProperties": {
+                    "method": "POST",
+                    "headers": {
+                        "Content-Type": "application/json"
+                    },
+                    "url": "https://prod-03.brazilsouth.logic.azure.com:443/workflows/40acbfb679df4db99235bb160041b3e7/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=cv-DAWG9PFlTjCj4x1uYPYrNNeMxc_AVOGDvblwdH1w",
+                    "connectVia": {
+                        "referenceName": "integrationRuntimeProducao",
+                        "type": "IntegrationRuntimeReference"
+                    },
+                    "body": {
+                        "DataFactoryName": "@{pipeline().DataFactory}",
+                        "PipelineName": "@{pipeline().Pipeline}",
+                        "Subject": "ERRO: Extração DAAS porto sem papel",
+                        "ErrorMessage": "Ocorreu um erro na extração do porto sem papel. <br><br>COMPONENTE: DAAS_para_rawzone<br><br>ERRO: @{activity('DAAS_para_rawzone').output}",
+                        "EmailTo": "codin@transportes.gov.br; ines.gama@transportes.gov.br;clodeinir.peres@infraestrutura.gov.br"
+                    }
+                }
+            },
