@@ -9,7 +9,6 @@ This repository contains JSON code examples for Azure Data Factory (ADF) pipelin
 - [Repository Structure](#repository-structure)
 - [Usage Instructions](#usage-instructions)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Description
 
@@ -23,7 +22,7 @@ The goal of this repository is to serve as a quick-reference guide for developer
 
 ## Repository Structure
 
-The repository is organized as follows:
+The repository can be organized as follows:
 
 ```
 /
@@ -34,6 +33,7 @@ The repository is organized as follows:
 │   │   └── pipeline.json
 │   └── Drop3-DataExport/
 │       └── pipeline.json
+├── Random_Drops_n_Tips.json
 ├── README.md
 └── CONTRIBUTING.md
 ```
@@ -62,10 +62,6 @@ The repository is organized as follows:
 ## Contributing
 
 Contributions are welcome! Follow the guidelines in `CONTRIBUTING.md` to submit fixes or add new knowledge drops.
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 ---
 
