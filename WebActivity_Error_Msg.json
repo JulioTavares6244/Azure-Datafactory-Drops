@@ -30,9 +30,9 @@
                     "body": {
                         "DataFactoryName": "@{pipeline().DataFactory}",
                         "PipelineName": "@{pipeline().Pipeline}",
-                        "Subject": "ERRO: Extração DAAS porto sem papel",
-                        "ErrorMessage": "Ocorreu um erro na extração do porto sem papel. <br><br>COMPONENTE: DAAS_para_rawzone<br><br>ERRO: @{activity('DAAS_para_rawzone').output}",
-                        "EmailTo": "codin@transportes.gov.br; ines.gama@transportes.gov.br;clodeinir.peres@infraestrutura.gov.br"
+                        "Subject": "ERRO: Extração DAAS para Rawzone",
+                        "ErrorMessage": "Ocorreu um erro na extração para a Rawzone. <br><br>COMPONENTE: DAAS_para_rawzone<br><br>ERRO: @{activity('DAAS_para_rawzone').output}",
+                        "EmailTo": "dataeng@organization.com; client@organization.com"
                     }
                 }
             },
